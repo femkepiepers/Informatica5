@@ -8,5 +8,5 @@ from math import sqrt as vierkantswortel
 linker_lid = vierkantswortel((a ** 2) + (b ** 2))
 rechter_lid = c
 
-#uitvoer
-print('In een rechthoekige driehoek met rechthoekszijden ' + ' a = input(a) ' + ' en ' + ' b = input(b) ' + 'is de schuine zijde' + ' c')
+# uitvoer:
+print('{} {} {:.2f} {} {} {:.2f} {} {:.2f}'.format('In een rechthoekige driehoek met rechthoekszijden', 'a =', a, 'en', 'b =', b, 'is de schuine zijde', linker_lid))
