@@ -1,21 +1,24 @@
 # invoer
-a = float(input('Aantal ogen dobbelsteen 1 aanvaller: '))
-b = float(input('Aantal ogen dobbelsteen 2 aanvaller: '))
-c = float(input('Aantal ogen dobbelsteen 3 aanvaller: '))
-d = float(input('Aantal ogen dobbelsteen 1 verdediger: '))
-e = float(input('Aantal ogen dobbelsteen 2 verdediger: '))
+a1 = float(input('a1: '))
+a2 = float(input('a2: '))
+a3 = float(input('a3: '))
+v1 = float(input('v1: '))
+v2 = float(input('v2: '))
 
-# berekening
-f = max(a, b, c)
-h = min(a, b, c)
-i = max(d, e)
-j = a + b + c - f - h
-k = d + e - i
+# sorteren
+sa1 = max(a1, a2, a3)
+sa2 = a1 + a2 + a3 - sa1 - min(a1, a2, a3)
 
+sv1 = max(v1, v2)
+sv2 = min(v1, v2)
+
+
+# winnaar bepalen
+if sa1 > sv1 and sa2 > sv2:
+    mes = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
+elif sv1 >= sa1 and sv2 >= sa2:
+    mes = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
+else:
+    mes = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
 # uitvoer
-if f > i and j > k:
-    print('aanvaller verliest 0 legers, verdediger verliest 2 legers')
-if f <= i and j <= k:
-    print('aanvaller verliest 2 legers, verdediger verliest 0 legers')
-if f <= i and j > k or f > i and j <= k:
-    print('aanvaller verliest 1 leger, verdediger verliest 1 leger')
+print(mes)
