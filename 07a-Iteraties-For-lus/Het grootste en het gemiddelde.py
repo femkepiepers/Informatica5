@@ -1,15 +1,20 @@
 # invoer
 aantal_getallen = int(input('aantal getallen: '))
-getal = ''
-som = ''
+max = 0
+som = 0
 
 for i in range(aantal_getallen):
-    getal = input('Getal: ')
+    getal = int(input('Getal: '))
+    if i == 0:
+        max = getal
+    elif getal > max:
+        max = getal
+    som += getal
 
-# Berekening
-max = max(getal)
-som += getal
-#gemiddelde = ((int(som)) / (int(aantal_getallen)))
+# Berekening gemiddelde
+gemiddelde = round((som / aantal_getallen), 2)
+
+
 
 #uitvoer
-print(max, som)
+print(max, gemiddelde)
