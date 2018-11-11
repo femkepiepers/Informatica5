@@ -11,10 +11,7 @@ for i in range(aantal_getallen):
         max = getal
     som += getal
 
-# Berekening gemiddelde
 gemiddelde = round((som / aantal_getallen), 2)
 
-
-
-#uitvoer
-print(max, gemiddelde)
+# uitvoer
+print('{} {:d} {} {:.2f}'.format('Het grootste getal is', max, 'en het gemiddelde is', gemiddelde))
