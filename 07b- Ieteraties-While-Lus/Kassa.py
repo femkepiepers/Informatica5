@@ -1,6 +1,11 @@
-prijs = float(input('prijs : '))
+# invoer
 totaal = 0
+prijs = 1
 
+# berekening
 while prijs > 0:
+    prijs = float(input('prijs : '))
     totaal += prijs
-    print(totaal)
+
+# uitvoer
+print('De totale prijs is €', '{:.2f}'.format(totaal))
