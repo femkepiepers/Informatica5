@@ -19,3 +19,5 @@ if som > 21:
 
 # uitvoer
 print(mes)
+
+

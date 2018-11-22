@@ -16,3 +16,19 @@ elif getal == 1:
 
 # uitvoer
 print(mes)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+getal = int(input('Getal: '))
+
+# zolang je het niet kan delen door 2, 3, 4 is het allicht geen priemgetal
+
+deler = 2
+
+while getal % deler != 0 and getal != 1:
+    deler += 1
+    print(deler)
+if deler == getal:
+    print('priemgetal')
+else:
+    print('geen priemgetal')
