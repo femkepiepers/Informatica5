@@ -1,23 +1,18 @@
-# input
-getal = int(input('Getal: '))
-volgend_getal = ''
-cyclelengte = 0
 
-# volgend getal berekenen
-if getal % 2 == 0:
-    volgend_getal = getal // 2
-elif getal % 2 != 0:
-    volgend_getal = (getal * 3) + 1
 
-# cyclelengte berekenen
-while volgend_getal != 1:
-    if getal % 2 == 0:
-        volgend_getal = getal // 2
+def volgend_collatz_getal(n):
+    volgend_getal = n
+    if volgend_getal % 2 == 0:
+        volgend_getal = volgend_getal / 2
+    else:
+        volgend_getal = (volgend_getal * 3) + 1
+    return int(volgend_getal)
 
-    elif getal % 2 != 0:
-        volgend_getal = (getal * 3) + 1
-    cyclelengte += 1
+def collatz(n):
+    aantal = 1
+    while n > 1:
+        n = volgend_collatz_getal(n)
+        aantal += 1
+    return aantal
 
-# uitvoer
-print(volgend_getal)
-print(cyclelengte)
+print(collatz)
