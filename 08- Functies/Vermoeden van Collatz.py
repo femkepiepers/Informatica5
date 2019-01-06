@@ -1,5 +1,3 @@
-
-
 def volgend_collatz_getal(n):
     volgend_getal = n
     if volgend_getal % 2 == 0:
