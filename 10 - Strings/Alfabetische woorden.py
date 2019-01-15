@@ -1,3 +1,4 @@
+# 1e functie
 def positie_laagste_ascii(woord):
     a = 10000
     for i in range(0, len(woord)):
@@ -7,6 +8,7 @@ def positie_laagste_ascii(woord):
     mes = woord.find(b)
     return mes
 
+# 2e functie
 def sorteer(woord):
     nieuwe_woord = ''
     for i in range(0, len(woord)):
@@ -20,6 +22,7 @@ def sorteer(woord):
         woord = woord[0:z] + woord[z + 1:]
     return nieuwe_woord
 
+# 3e functie
 def is_alfabetisch(woord):
     b = sorteer(woord)
     if b == woord:
