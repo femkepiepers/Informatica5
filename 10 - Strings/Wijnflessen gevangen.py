@@ -1,6 +1,6 @@
 # INVOER
 doden = int(input('Aantal doden: '))
-for i in range(doden):
+while :
     naam = str(input('Naam: '))
 
 
