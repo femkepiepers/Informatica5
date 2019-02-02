@@ -1,17 +1,20 @@
 def vlag(richting, kleuren):
 
     if richting == 'verticaal':
-        mes = kleuren[0] + ' | ' + kleuren[1] + ' | ' + kleuren[2]
-        return mes
-
-    elif richting == 'horizontaal':
-        mes = kleuren[0]
-        a = 0
-        while a < len(kleuren) + 1:
-            a += 1
-            mes += ' - '
-            mes += kleuren[a]
+        a = len(kleuren)
+        mes = ''
+        for i in range(0, a + 1):
+            mes += kleuren[i] + ' | '
+            if i == a:
+                mes += kleuren[i]
 
         return mes
 
-print(vlag('horizontaal',('rood', 'wit', 'blauw')))
+   # elif richting == 'horizontaal':
+    #    for i in range(0, len(kleuren)):
+     #       mes = kleuren[i] + '\n' + '-' + '\n'
+
+      #  return mes
+
+
+print(vlag('verticaal',('rood', 'wit', 'blauw')))
