@@ -1,13 +1,11 @@
 def geldige_zet(zet):
 
-    if zet[0] in 'KDTLP'and zet[1] in 'abcdefgh' and zet[2] in '12345678':
+    mes = False
+    if len(zet) == 3 and zet[0] in 'KDTLP'and zet[1] in 'abcdefgh' and zet[2] in '12345678':
         mes = True
 
-    elif zet[0] in 'abcdefgh' and zet[1] in '123456784':
+    elif len(zet) == 2 and zet[0] in 'abcdefgh' and zet[1] in '123456784':
         mes = True
-
-    else:
-        mes = False
 
     return mes
 
@@ -21,3 +19,11 @@ def geldige_zetten(zetten):
         a += 1
 
     return mes
+
+#  VERBETERING KLAS
+def geldige_zetten(zetten):
+
+    i = 0
+    while i < len(zetten) and geldige_zetten([i]):
+        i += 1
+    return i >= len(zetten)
