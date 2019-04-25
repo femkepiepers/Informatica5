@@ -1,4 +1,4 @@
-#bestand = open('text.txt')
+#bestand = open('Klas.txt')
 
 #lijn = bestand.readline()
 
@@ -10,15 +10,15 @@
 
 # lijnen = []
 #
-# with open('text.txt') as bestand:
+# with open('Klas.txt') as bestand:
 #     lijnen = bestand.readlines()
 #
 # print('er zitten ' + str(len(lijnen)) + ' personen in de klas')
 
 nieuwe_leerlingen = ['Alice', 'Baptiste']
 
-with open('text.txt', 'w') as bestand:
+with open('Klas.txt', 'w') as bestand:
     bestand.write('\n' + '\n'.join(nieuwe_leerlingen))
 # a is write en r is lees
-with open('text.txt', 'w') as bestand:
+with open('Klas.txt', 'w') as bestand:
     bestand.writelines(''.join(nieuwe_leerlingen))
