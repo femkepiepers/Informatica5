@@ -1,6 +1,9 @@
 def wisselen_mogelijk(ruilmarkt, wens, verzameld):
-    ruilmarkt = {'goud': {'erts', 'wol', 'steen'}, 'wol': {'erts', 'steen', 'hout'}, 'erts': {'hout', 'steen'}, 'steen': {'hout', 'graan'}}
+    if ruilmarkt[wens].issubset(verzameld):
+        mes = True
+    else:
+        mes = False
+    return mes
 
-    mes = set(verzameld)
-
-    return mes.issubset(ruilmarkt[wens])
+def bereken_ruilmiddelen(ruilmarkt, wensen, verzameld):
+    if
