@@ -20,7 +20,7 @@ def insertion_sort(a):
     return a
 
 
-i, r, t = 10, [], []
+i, n, t = 10, [], []
 
 while i < 10000:
 
@@ -31,8 +31,10 @@ while i < 10000:
 
     n.append(i)
     t.append(stop - start)
-    print(stop - start)
     i *= 2
 
-plt.plot(n, t)
+plt.plot(n, t, '-ro')
+plt.title('insertion sort')
+plt.xlabel('N')
+plt.ylabel('t')
 plt.show()
